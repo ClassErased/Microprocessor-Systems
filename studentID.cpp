@@ -24,9 +24,10 @@ int main()
     {
         if (std::isdigit(c)) 
         {
-                if (c % 2 == 0) // Checking if the digit is divisble by 2 (if true it must be even)
+                int digit = c - '0'; // quick conversion from ascii form to digit form          
+                if (digit % 2 == 0) // Check if digit is divisble by two
                 {
-                sum += c - '0'; // Add to sum, the digit converted from ASCII to its integer form
+                sum += digit; // Add to sum
 
 
             } else continue; 
