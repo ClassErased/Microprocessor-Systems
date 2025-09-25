@@ -1,17 +1,16 @@
 #include <iostream>
 #include <cctype>
 #include <vector>
-// completed but needs more stuff before finished
 
 
 int main() 
 {
     
-    std::string input; // Intialise a str called input
-    int sum = 0; // Initialise an int sum
+    std::string input; // Create input string for student ID
+    int sum = 0; // Initialise the sum of digits
 
     std::cout << "Please enter your student ID: ";
-    std::cin >> input; // Assign user input to str
+    std::cin >> input; // Assign Student ID to input
 
     /* Iterate over each character in the input
     This could also be done in the form (int i = 0; i < input.length(); i++)*/
@@ -20,14 +19,13 @@ int main()
     {
         if (std::isdigit(c)) 
         {
-                int digit = c - '0'; // quick conversion from ascii form to digit form          
-                if (digit % 2 == 0) // Check if digit is divisble by two
+                int digit = c - '0'; // Convert character to integer and check if its even        
+                if (digit % 2 == 0) 
                 {
-                sum += digit; // Add to sum
-            } else continue;   
+                sum += digit; // Add an even integer to sum
+            } 
         }
     }
-    std::cout << sum;
+    std::cout << "The sum of the even digits is: " << sum << "\n";
     return 0;
 }
-
