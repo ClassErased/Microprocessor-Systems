@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cctype>
-#include <vector>
 
 
 int main() 
@@ -29,3 +28,4 @@ int main()
     std::cout << "The sum of the even digits is: " << sum << "\n";
     return 0;
 }
+
